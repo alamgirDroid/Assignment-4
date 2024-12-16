@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "3590e34c-2ee6-4659-8c83-2f82588fb057",
+		"name": "Assignment-4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38153906"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n     \"email\":\"halamgirerqwe3\",\r\n     \"nidNumber\": \"012345678891315\",\r\n        \"firstName\": \"Rana\",\r\n        \"lastName\": \"H\",\r\n        \"mobileNumber\": \"01723456780\",\r\n        \"password\": \"1234\",\r\n        \"bloodGroup\":\"A\"\r\n        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/Registration",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"Registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE}}/Login",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SingleProfileRead",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/SingleProfileRead",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"SingleProfileRead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllProfileRead",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE}}/AllProfileRead",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"AllProfileRead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProfileUpdate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Hossen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/ProfileUpdate",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"ProfileUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProfileDelete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/ProfileDelete/67602f17f7cd78858eee9822",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"ProfileDelete",
+						"67602f17f7cd78858eee9822"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE",
+			"value": "http://localhost:5000/api",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc2MDIwYzYzYmUzMDI5OGM0ZWZlNGRkIiwiaWF0IjoxNzM0MzUzMzQzLCJleHAiOjE3MzY5NDUzNDN9.BS_BBc6X7W3BH1zY5ncjAisXDU5UMCTTq6cMroBQmik",
+			"type": "string"
+		}
+	]
+}
